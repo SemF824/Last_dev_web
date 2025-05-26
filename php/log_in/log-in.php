@@ -75,7 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <p class="signup">
-          Nouveau utilisateur ? <a href="#">INSCRIVEZ-VOUS ICI</a>
+          Nouvel utilisateur ?<a href="./sign-in.php"><Inscrivez-vous>Inscrivez-vous ! </Inscrivez-vous></a>
+
         </p>
       </div>
     </div>
