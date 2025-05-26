@@ -1,0 +1,199 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 30px;
+  vertical-align: top;
+  margin-right: 8px;
+  border-radius: 15px; 
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+.breadcrumb a {
+  color: #2d8f58;
+  text-decoration: none;
+}
+
+.container {
+  padding: 40px;
+}
+
+.checkout-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.left-column,
+.right-column {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.left-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 1;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-outline {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #2d8f58;
+  color: #2d8f58;
+  border-radius: 6px;
+}
+
+.btn-main {
+  background: #2d8f58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-summary {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-summary img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  color: #2d8f58;
+  font-weight: bold;
+}
+
+.promo-code {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.promo-code input {
+  flex: 1;
+}
+
+.promo-code button {
+  background: #888;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.summary .total {
+  font-size: 1.2rem;
+}
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.55rem;
+  white-space: nowrap;    
+  overflow: hidden;       
+  text-overflow: ellipsis;
+  max-width: 100%;        
+}
+
+
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 10px;
+}

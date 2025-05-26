@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #222, #999);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  background: transparent;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  width: 50%;
+  padding-right: 40px;
+}
+
+.left-panel .logo-icon {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.left-panel h1 {
+  display: inline;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-panel h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+}
+
+.left-panel p {
+  font-size: 0.95rem;
+  color: #ccc;
+  max-width: 300px;
+}
+
+.right-panel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card p.welcome {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.login-card h3 {
+  margin-top: 5px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.login-card button[type="submit"] {
+  background: #111;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.social-logins button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.google::before,
+.facebook::before,
+.apple::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.google::before {
+  background-image: url(https://img.icons8.com/color/48/google-logo.png);
+}
+.facebook::before {
+  background-image: url(https://img.icons8.com/color/48/facebook-new.png);
+}
+.apple::before {
+  background-image: url(https://img.icons8.com/ios-filled/50/mac-os.png);
+}
+
+.signup {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 10px;
+}
+.signup a {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+}

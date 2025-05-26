@@ -1,0 +1,160 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 30px;
+  vertical-align: top;
+  margin-right: 8px;
+  border-radius: 15px;
+}
+
+.logo span {
+  font-size: 1.2rem; /* you can adjust this to control text size */
+  font-weight: 600;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+.breadcrumb a {
+  color: #2d8f58;
+  text-decoration: none;
+}
+
+main.confirmation {
+  display: flex;
+  background: white;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.confirmation-left {
+  flex: 2;
+  padding-right: 2rem;
+}
+
+.confirmation-right {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.checkmark {
+  font-size: 3rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.order-id {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.message {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buttons .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.btn.primary {
+  background: #4caf50;
+  color: white;
+}
+
+.btn.secondary {
+  color: #4caf50;
+  font-size: 0.9rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product .price {
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.summary {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.summary .paid span:last-child {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px;
+  margin-top: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 10px;
+}
