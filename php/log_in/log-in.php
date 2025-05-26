@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="login-wrapper">
     <div class="left-panel">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Eo_circle_green_white_checkmark.svg/1024px-Eo_circle_green_white_checkmark.svg.png" alt="Éclat Floral Logo" class="logo-icon" />
+      <img src="../image/avatar.jpg" alt="Éclat Floral Logo" class="logo-icon" />
       <h1>Éclat Floral</h1>
       <h2>Cultiver l’avenir…</h2>
       <p>
