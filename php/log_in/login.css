@@ -1,167 +1,160 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #505050, #9c9c9c);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #222, #999);
+  color: white;
   height: 100vh;
-  overflow: hidden;
-  animation: fadeIn 1.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
+.login-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
   max-width: 1000px;
-  background: #fff;
-  display: flex;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
-.left, .right {
-  padding: 40px;
-  width: 50%;
-}
-
-.left {
   background: transparent;
-  color: white;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
-.logo {
-  width: 40px;
-  height: auto;
+.left-panel {
+  width: 50%;
+  padding-right: 40px;
 }
 
-.left h1 {
-  font-size: 24px;
-  margin: 10px 0;
+.left-panel .logo-icon {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-.left h2 {
-  font-size: 20px;
+.left-panel h1 {
+  display: inline;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.left-panel h2 {
+  font-size: 1.5rem;
   margin: 20px 0 10px;
 }
 
-.left p {
-  font-size: 14px;
+.left-panel p {
+  font-size: 0.95rem;
+  color: #ccc;
   max-width: 300px;
 }
 
-.right form {
+.right-panel {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card p.welcome {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.login-card h3 {
+  margin-top: 5px;
+}
+
+.login-card form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-.right .welcome {
-  font-size: 14px;
-  color: gray;
-}
-
-.right h2 {
-  margin: 10px 0 20px;
-}
-
-input[type="email"],
-input[type="password"] {
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  padding: 10px;
+  font-size: 0.95rem;
   border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-.password-field {
-  position: relative;
-}
-
-.password-field span {
-  position: absolute;
-  right: 10px;
-  top: 12px;
-  cursor: pointer;
+  border-radius: 6px;
 }
 
 .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
-  margin-bottom: 20px;
+  font-size: 0.8rem;
+  color: #666;
 }
 
-button[type="submit"] {
-  background: #000;
+.login-card button[type="submit"] {
+  background: #111;
   color: white;
-  padding: 12px;
+  padding: 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background: #333;
+  margin-top: 10px;
 }
 
 .divider {
   text-align: center;
   margin: 20px 0;
-  position: relative;
-  font-size: 14px;
+  font-size: 0.85rem;
+  color: #666;
 }
 
-.divider::before, .divider::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 1px;
-  background: #ccc;
-  top: 50%;
-}
-
-.divider::before {
-  left: 0;
-}
-
-.divider::after {
-  right: 0;
-}
-
-.social-buttons button {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.social-logins button {
   width: 100%;
+  padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background: white;
-  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
   cursor: pointer;
+  background-color: white;
 }
 
-.social-buttons img {
-  height: 20px;
-  margin-right: 10px;
-  filter: none; /* Prevent icon color change */
+.google::before,
+.facebook::before,
+.apple::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.google::before {
+  background-image: url(https://img.icons8.com/color/48/google-logo.png);
+}
+.facebook::before {
+  background-image: url(https://img.icons8.com/color/48/facebook-new.png);
+}
+.apple::before {
+  background-image: url(https://img.icons8.com/ios-filled/50/mac-os.png);
 }
 
 .signup {
-  font-size: 12px;
+  font-size: 0.8rem;
   text-align: center;
   margin-top: 10px;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  } to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.signup a {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
 }
