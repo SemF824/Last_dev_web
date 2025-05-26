@@ -74,9 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="divider">OU</div>
 
                 <div class="social-logins">
-                    <button class="google">S'inscrire avec Google</button>
-                    <button class="facebook">S'inscrire avec Facebook</button>
-                    <button class="apple">S'inscrire avec Apple</button>
+                    <button class="google">Continuer avec Google</button>
+                    <button class="facebook">Continuer avec Facebook</button>
+                    <button class="apple">Continuer avec Apple</button>
                 </div>
 
                 <p class="signup">
