@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connexion – Éclat Floral</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="./log_in/login.css">
 </head>
 
 <body>
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <p class="signup">
-          Nouveau utilisateur ? <a href="#">INSCRIVEZ-VOUS ICI</a>
+          Nouvel utilisateur ? <a href="./log_in/sign-in.php">INSCRIVEZ-VOUS ICI</a>
         </p>
       </div>
     </div>
