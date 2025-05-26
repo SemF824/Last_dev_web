@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="left-panel">
       <img src="../image/avatar.jpg" alt="Éclat Floral Logo" class="logo-icon" />
       <h1>Éclat Floral</h1>
-      <h2>Cultiver l’avenir…</h2>
+      <h2>Cultiver l’avenir</h2>
       <p>
         Inspirées par la nature et guidées par l’émotion, nos créations florales éveillent les sens et embellissent chaque instant.
       </p>
