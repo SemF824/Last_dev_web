@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #505050, #9c9c9c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.left, .right {
+  padding: 40px;
+  width: 50%;
+}
+
+.left {
+  background: transparent;
+  color: white;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.left h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.left h2 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+.left p {
+  font-size: 14px;
+  max-width: 300px;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right .welcome {
+  font-size: 14px;
+  color: gray;
+}
+
+.right h2 {
+  margin: 10px 0 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background: #000;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #333;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  font-size: 14px;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.social-buttons button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-buttons img {
+  height: 20px;
+  margin-right: 10px;
+  filter: none; /* Prevent icon color change */
+}
+
+.signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
