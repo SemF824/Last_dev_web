@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Éclat Floral</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+        <nav class="main-navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="./php/image/avatar.jpg" alt="Éclat Floral Logo" />
+          <span>Éclat Floral</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">Découvrir <span>▼</span></a>
+          </li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contactez-nous</a></li>
+        </ul>
+        <div class="nav-icons">
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- PANIER -->
+    <main style="padding: 2rem">
+      <h1 style="text-align: center">Votre panier</h1>
+      <p style="text-align: center">
+        <a href="#" class="link-green" style="color: #00a651;">Retour à la boutique</a>
+      </p>
+
+      <table style="width: 100%; margin-top: 2rem; border-collapse: collapse">
+        <thead>
+          <tr style="text-align: left; border-bottom: 1px solid #ddd">
+            <th>Produit</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #eee">
+            <td
+              style="
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+              "
+            >
+              <img src="bouquet-roses.png" alt="Bouquet de roses" width="80" />
+              <div>
+                <strong>Bouquet de roses Éclat Floral®</strong><br />
+                <a href="#" class="link-green">Supprimer</a>
+              </div>
+            </td>
+            <td>34.99 €</td>
+            <td>
+             <label for="quantity">Quantité</label>
+          <div class="quantity">
+            <button type="button">+</button>
+            <input type="number" id="quantity" value="1" min="1" />
+            <button type="button">-</button>
+          </div>
+            </td>
+            <td>34.99 €</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div
+        style="
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-top: 2rem;
+          gap: 2rem;
+        "
+      >
+        <strong>Sous-total</strong>
+        <span>34.99 €</span>
+        <button class="add-to-cart" style="width: 170px;">Paiement</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./php/image/avatar.jpg" alt="Logo Éclat Floral" />
+          <div>
+            <h4>Éclat Floral</h4>
+            <p>La nature chez vous, pour un<br />bien-être au quotidien.</p>
+          </div>
+        </div>
+        <div>
+          <h5>Découvrir</h5>
+          <ul>
+            <li><a href="#">Les plus recherchés</a></li>
+            <li><a href="#">Le plus vendu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>À propos</h5>
+          <ul>
+            <li><a href="#">Aide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Info</h5>
+          <ul>
+            <li><a href="#">Contactez-nous</a></li>
+            <li><a href="#">Politiques de confidentialité</a></li>
+            <li><a href="#">Conditions générales</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
