@@ -28,8 +28,10 @@ body {
 
 .left-panel .logo-icon {
   width: 30px;
-  vertical-align: middle;
+  vertical-align: top;
   margin-right: 8px;
+  border-radius: 15px; 
+}
 }
 
 .left-panel h1 {
