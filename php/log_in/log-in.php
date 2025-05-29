@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    // Vérifie l'existence de l'utilisateur
+    // Vérifier l'existence de l'utilisateur
     $stmt = $conn->prepare("SELECT user_password FROM users WHERE user_email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($db_password);
         $stmt->fetch();
 
-        // Vérifie le mot de passe haché
+        // Vérifier le mot de passe haché
         if (password_verify($pass, $db_password)) {
             echo "<script>alert('Connexion réussie'); window.location.href='../main.html';</script>";
             exit();
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Mot de passe" required />
           <div class="options">
             <label><input type="checkbox" checked /> Se souvenir de moi</label>
-            <a href="#">Mot de passe oublié ?</a>
+            <a href="#" style="color: black">Mot de passe oublié ?</a>
           </div>
          <button type="submit">SE CONNECTER</button>
 
