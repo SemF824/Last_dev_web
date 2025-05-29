@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
     $confirm = $_POST['confirm_password'];
 
-    // Vérifie si les mots de passe correspondent
+    // Vérifier si les mots de passe correspondent
     if ($pass !== $confirm) {
         echo "<script>alert('Les mots de passe ne correspondent pas');</script>";
     } else {
-        // Vérifie si l'email existe déjà
+        // Vérifier si l'email existe déjà
         $stmt = $conn->prepare("SELECT user_email FROM users WHERE user_email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
