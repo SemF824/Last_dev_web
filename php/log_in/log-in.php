@@ -4,29 +4,36 @@ $user = "root";
 $password = "";
 $db = "eclat_floral";
 
-try {
-
-  $conn = new mysqli($host, $user, $password, $db);
-} catch (\Throwable $th) {
-
+$conn = new mysqli($host, $user, $password, $db);
+if ($conn->connect_error) {
+    die("Erreur de connexion : " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = $_POST['email'];
-  $pass = $_POST['password'];
-  $sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
-  try {
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
 
-    $result = $conn->query($sql);
+    // Vérifie l'existence de l'utilisateur
+    $stmt = $conn->prepare("SELECT user_password FROM users WHERE user_email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
 
-    if ($result && $result->num_rows > 0) {
-      echo "<script>alert('Connexion réussie !');</script>";
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($db_password);
+        $stmt->fetch();
+
+        // Vérifie le mot de passe haché
+        if (password_verify($pass, $db_password)) {
+            echo "<script>alert('Connexion réussie'); window.location.href='../main.html';</script>";
+            exit();
+        } else {
+            echo "<script>alert('Mot de passe incorrect');</script>";
+        }
     } else {
-      echo "<script>alert('Identifiants invalides');</script>";
+        echo "<script>alert('Email non trouvé');</script>";
     }
-  } catch (\Throwable $th) {
-
-  }
+    $stmt->close();
 }
 ?>
 
@@ -56,14 +63,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="welcome">Heureux de vous revoir !</p>
         <h3>Connectez-vous à votre compte</h3>
 
-        <form>
-          <input type="email" placeholder="Email" value="johnsbrooks@gmail.com" required />
-          <input type="password" placeholder="Mot de passe" value="*************" required />
+       <form method="POST">
+          <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Mot de passe" required />
           <div class="options">
             <label><input type="checkbox" checked /> Se souvenir de moi</label>
             <a href="#">Mot de passe oublié ?</a>
           </div>
-          <button type="submit">CONTINUER</button>
+         <button type="submit">SE CONNECTER</button>
+
         </form>
 
         <div class="divider">OU</div>
